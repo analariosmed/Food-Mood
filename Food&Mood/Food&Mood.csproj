@@ -122,5 +122,8 @@
   <ItemGroup>
     <None Include="Resources\all.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="foodRep.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

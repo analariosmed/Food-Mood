@@ -1,0 +1,50 @@
+﻿Meat, Turkey, 5
+Meat, Chicken, 4
+Meat, Beef, 4
+Meat, Lamb, 3
+Fish, Salmon, 4
+Fish, Tuna, 3
+Fish, Trout, 3
+Fish, Cod, 2
+Eggs and Dairy, Eggs, 3
+Eggs and Dairy, Cheese, 3
+Eggs and Dairy, Milk, 2
+Eggs and Dairy, Yogurt, 2
+Nuts, Walnuts, 3
+Nuts, Almonds, 2
+Nuts, Pistachios, 2
+Nuts, Cashews, 2
+Fruits, Bananas, 2
+Fruits, Pineapple, 1
+Fruits, Avocado, 2
+Fruits, Strawberries, 1
+Cereals and Grains, Oats, 2
+Cereals and Grains, Quinoa, 3
+Cereals and Grains, Brown Rice, 2
+Cereals and Grains, Whole Wheat Bread, 2
+Vegetables, Spinach, 2
+Vegetables, Broccoli, 2
+Vegetables, Carrots, 1
+Vegetables, Zucchini, 1
+Legumes, Chickpeas, 3
+Legumes, Lentils, 3
+Legumes, Kidney Beans, 3
+Legumes, Peas, 2
+Soy Products, Tofu, 3
+Soy Products, Soy Milk, 2
+Soy Products, Tempeh, 3
+Soy Products, Edamame, 2
+Fats, Olive Oil, 1
+Fats, Avocado, 2
+Fats, Walnuts, 3
+Fats, Chia Seeds, 3
+Whole Grains, Whole Wheat Pasta, 2
+Whole Grains, Whole Wheat Couscous, 2
+Whole Grains, Whole Wheat Bread, 2
+Whole Grains, Whole Grain Cookies, 1
+Beverages, Almond Milk, 2
+Beverages, Oat Milk, 2
+Beverages, Tea, 1
+Beverages, Water, 1
+Desserts and Sweets, Dark Chocolate, 3
+Desserts and Sweets, Banana with Honey, 2

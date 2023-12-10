@@ -48,7 +48,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Ingredient.cs" />
+    <Compile Include="Classes\IngredientsManager.cs" />
     <Compile Include="Classes\UserManager.cs" />
+    <Compile Include="CustomDish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomDish.Designer.cs">
+      <DependentUpon>CustomDish.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +79,9 @@
       <DependentUpon>Report.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\User.cs" />
+    <EmbeddedResource Include="CustomDish.resx">
+      <DependentUpon>CustomDish.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +137,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="foodRep.txt" />
+    <None Include="Resources\Dishes.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Ingredients.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\Users.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

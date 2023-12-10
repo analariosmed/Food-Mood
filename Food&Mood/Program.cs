@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Food_Mood.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -6,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Food_Mood
 {
-    internal static class Program
+    public static class Program
     {
         /// <summary>
         /// The main entry point for the application.
@@ -14,6 +15,7 @@ namespace Food_Mood
         [STAThread]
         static void Main()
         {
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

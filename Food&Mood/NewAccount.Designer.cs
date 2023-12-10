@@ -31,9 +31,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxNAName = new System.Windows.Forms.TextBox();
+            this.textBoxNAPassword = new System.Windows.Forms.TextBox();
+            this.textBoxNAEmail = new System.Windows.Forms.TextBox();
             this.buttonCreate = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -42,9 +42,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(48, 210);
+            this.label1.Location = new System.Drawing.Point(15, 74);
+            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 55);
+            this.label1.Size = new System.Drawing.Size(51, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "User :";
             // 
@@ -52,9 +53,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(39, 329);
+            this.label2.Location = new System.Drawing.Point(12, 116);
+            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(262, 55);
+            this.label2.Size = new System.Drawing.Size(86, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Password :";
             // 
@@ -62,44 +64,49 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.Location = new System.Drawing.Point(48, 472);
+            this.label4.Location = new System.Drawing.Point(15, 166);
+            this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(169, 55);
+            this.label4.Size = new System.Drawing.Size(56, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "Email :";
             // 
-            // textBox1
+            // textBoxNAName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(348, 210);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(664, 62);
-            this.textBox1.TabIndex = 4;
+            this.textBoxNAName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBoxNAName.Location = new System.Drawing.Point(110, 74);
+            this.textBoxNAName.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxNAName.Name = "textBoxNAName";
+            this.textBoxNAName.Size = new System.Drawing.Size(212, 26);
+            this.textBoxNAName.TabIndex = 4;
             // 
-            // textBox2
+            // textBoxNAPassword
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox2.Location = new System.Drawing.Point(348, 322);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(664, 62);
-            this.textBox2.TabIndex = 5;
+            this.textBoxNAPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBoxNAPassword.Location = new System.Drawing.Point(110, 113);
+            this.textBoxNAPassword.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxNAPassword.Name = "textBoxNAPassword";
+            this.textBoxNAPassword.Size = new System.Drawing.Size(212, 26);
+            this.textBoxNAPassword.TabIndex = 5;
             // 
-            // textBox4
+            // textBoxNAEmail
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox4.Location = new System.Drawing.Point(348, 469);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(664, 62);
-            this.textBox4.TabIndex = 7;
+            this.textBoxNAEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBoxNAEmail.Location = new System.Drawing.Point(110, 165);
+            this.textBoxNAEmail.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxNAEmail.Name = "textBoxNAEmail";
+            this.textBoxNAEmail.Size = new System.Drawing.Size(212, 26);
+            this.textBoxNAEmail.TabIndex = 7;
             // 
             // buttonCreate
             // 
             this.buttonCreate.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.buttonCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCreate.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.buttonCreate.Location = new System.Drawing.Point(437, 682);
+            this.buttonCreate.Location = new System.Drawing.Point(138, 240);
+            this.buttonCreate.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.buttonCreate.Name = "buttonCreate";
-            this.buttonCreate.Size = new System.Drawing.Size(300, 146);
+            this.buttonCreate.Size = new System.Drawing.Size(95, 51);
             this.buttonCreate.TabIndex = 10;
             this.buttonCreate.Text = "Create Account";
             this.buttonCreate.UseVisualStyleBackColor = false;
@@ -109,25 +116,27 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(524, 61);
+            this.label5.Location = new System.Drawing.Point(165, 21);
+            this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(308, 55);
+            this.label5.Size = new System.Drawing.Size(103, 20);
             this.label5.TabIndex = 12;
             this.label5.Text = "New Account";
             // 
             // NewAccount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1263, 971);
+            this.ClientSize = new System.Drawing.Size(399, 341);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.buttonCreate);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxNAEmail);
+            this.Controls.Add(this.textBoxNAPassword);
+            this.Controls.Add(this.textBoxNAName);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.Name = "NewAccount";
             this.Text = "NewAccount";
             this.ResumeLayout(false);
@@ -140,9 +149,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxNAName;
+        private System.Windows.Forms.TextBox textBoxNAPassword;
+        private System.Windows.Forms.TextBox textBoxNAEmail;
         private System.Windows.Forms.Button buttonCreate;
         private System.Windows.Forms.Label label5;
     }

@@ -65,7 +65,9 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button8 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -75,8 +77,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -91,9 +91,10 @@
             this.labelItem.AutoSize = true;
             this.labelItem.CausesValidation = false;
             this.labelItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.labelItem.Location = new System.Drawing.Point(69, 740);
+            this.labelItem.Location = new System.Drawing.Point(22, 260);
+            this.labelItem.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.labelItem.Name = "labelItem";
-            this.labelItem.Size = new System.Drawing.Size(559, 46);
+            this.labelItem.Size = new System.Drawing.Size(218, 17);
             this.labelItem.TabIndex = 5;
             this.labelItem.Text = "Select the food of your meal:";
             // 
@@ -107,9 +108,10 @@
             "Snack",
             "Lunch",
             "Dinner"});
-            this.checkedListBoxMealTime.Location = new System.Drawing.Point(1249, 325);
+            this.checkedListBoxMealTime.Location = new System.Drawing.Point(394, 114);
+            this.checkedListBoxMealTime.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.checkedListBoxMealTime.Name = "checkedListBoxMealTime";
-            this.checkedListBoxMealTime.Size = new System.Drawing.Size(322, 212);
+            this.checkedListBoxMealTime.Size = new System.Drawing.Size(104, 76);
             this.checkedListBoxMealTime.TabIndex = 10;
             // 
             // comboBoxType
@@ -126,9 +128,10 @@
             "Fish",
             "Cereal",
             "Soy Product"});
-            this.comboBoxType.Location = new System.Drawing.Point(261, 819);
+            this.comboBoxType.Location = new System.Drawing.Point(82, 288);
+            this.comboBoxType.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.comboBoxType.Name = "comboBoxType";
-            this.comboBoxType.Size = new System.Drawing.Size(518, 60);
+            this.comboBoxType.Size = new System.Drawing.Size(166, 26);
             this.comboBoxType.TabIndex = 12;
             // 
             // label6
@@ -136,9 +139,10 @@
             this.label6.AutoSize = true;
             this.label6.CausesValidation = false;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(80, 821);
+            this.label6.Location = new System.Drawing.Point(25, 288);
+            this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(136, 46);
+            this.label6.Size = new System.Drawing.Size(54, 17);
             this.label6.TabIndex = 13;
             this.label6.Text = "Type :";
             // 
@@ -175,9 +179,10 @@
             "Broccoli",
             "Carrots",
             "Zucchini"});
-            this.comboBoxName.Location = new System.Drawing.Point(1086, 822);
+            this.comboBoxName.Location = new System.Drawing.Point(343, 289);
+            this.comboBoxName.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.comboBoxName.Name = "comboBoxName";
-            this.comboBoxName.Size = new System.Drawing.Size(518, 60);
+            this.comboBoxName.Size = new System.Drawing.Size(166, 26);
             this.comboBoxName.TabIndex = 14;
             this.comboBoxName.SelectedIndexChanged += new System.EventHandler(this.comboBoxType_SelectedIndexChanged);
             // 
@@ -186,9 +191,10 @@
             this.label2.AutoSize = true;
             this.label2.CausesValidation = false;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(573, 1556);
+            this.label2.Location = new System.Drawing.Point(181, 547);
+            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 29);
+            this.label2.Size = new System.Drawing.Size(54, 9);
             this.label2.TabIndex = 18;
             this.label2.Text = "Depression";
             // 
@@ -197,9 +203,10 @@
             this.label7.AutoSize = true;
             this.label7.CausesValidation = false;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(741, 1556);
+            this.label7.Location = new System.Drawing.Point(234, 547);
+            this.label7.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(104, 29);
+            this.label7.Size = new System.Drawing.Size(39, 9);
             this.label7.TabIndex = 19;
             this.label7.Text = "Anxious";
             // 
@@ -208,9 +215,10 @@
             this.label8.AutoSize = true;
             this.label8.CausesValidation = false;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(917, 1556);
+            this.label8.Location = new System.Drawing.Point(290, 547);
+            this.label8.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 29);
+            this.label8.Size = new System.Drawing.Size(21, 9);
             this.label8.TabIndex = 20;
             this.label8.Text = "Sad";
             // 
@@ -219,9 +227,10 @@
             this.label9.AutoSize = true;
             this.label9.CausesValidation = false;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(1070, 1556);
+            this.label9.Location = new System.Drawing.Point(338, 547);
+            this.label9.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(73, 29);
+            this.label9.Size = new System.Drawing.Size(28, 9);
             this.label9.TabIndex = 21;
             this.label9.Text = "Calm";
             // 
@@ -230,9 +239,10 @@
             this.label10.AutoSize = true;
             this.label10.CausesValidation = false;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(1235, 1556);
+            this.label10.Location = new System.Drawing.Point(390, 547);
+            this.label10.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(87, 29);
+            this.label10.Size = new System.Drawing.Size(32, 9);
             this.label10.TabIndex = 22;
             this.label10.Text = "Happy";
             // 
@@ -241,9 +251,10 @@
             this.label11.AutoSize = true;
             this.label11.CausesValidation = false;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(857, 830);
+            this.label11.Location = new System.Drawing.Point(271, 292);
+            this.label11.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(154, 46);
+            this.label11.Size = new System.Drawing.Size(59, 17);
             this.label11.TabIndex = 23;
             this.label11.Text = "Name :";
             // 
@@ -251,9 +262,10 @@
             // 
             this.buttonSave.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.buttonSave.Location = new System.Drawing.Point(1417, 1745);
+            this.buttonSave.Location = new System.Drawing.Point(447, 613);
+            this.buttonSave.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(302, 82);
+            this.buttonSave.Size = new System.Drawing.Size(95, 29);
             this.buttonSave.TabIndex = 25;
             this.buttonSave.Text = "Save Report";
             this.buttonSave.UseVisualStyleBackColor = false;
@@ -261,9 +273,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Food_Mood.Properties.Resources.all;
-            this.pictureBox1.Location = new System.Drawing.Point(215, 1429);
+            this.pictureBox1.Location = new System.Drawing.Point(68, 502);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1495, 113);
+            this.pictureBox1.Size = new System.Drawing.Size(472, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
@@ -272,9 +285,10 @@
             // 
             this.buttonAdd.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.buttonAdd.Location = new System.Drawing.Point(683, 1727);
+            this.buttonAdd.Location = new System.Drawing.Point(216, 607);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(302, 82);
+            this.buttonAdd.Size = new System.Drawing.Size(95, 29);
             this.buttonAdd.TabIndex = 28;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = false;
@@ -284,9 +298,10 @@
             // 
             this.buttonRemove.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.buttonRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.buttonRemove.Location = new System.Drawing.Point(1050, 1733);
+            this.buttonRemove.Location = new System.Drawing.Point(332, 609);
+            this.buttonRemove.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(302, 82);
+            this.buttonRemove.Size = new System.Drawing.Size(95, 29);
             this.buttonRemove.TabIndex = 29;
             this.buttonRemove.Text = "Remove";
             this.buttonRemove.UseVisualStyleBackColor = false;
@@ -324,9 +339,11 @@
             this.groupBox1.Controls.Add(this.comboBoxType);
             this.groupBox1.Controls.Add(this.checkedListBoxMealTime);
             this.groupBox1.Controls.Add(this.labelItem);
-            this.groupBox1.Location = new System.Drawing.Point(30, 44);
+            this.groupBox1.Location = new System.Drawing.Point(9, 15);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1798, 2033);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.groupBox1.Size = new System.Drawing.Size(568, 714);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Report";
@@ -336,9 +353,10 @@
             // 
             this.button5.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.button5.Location = new System.Drawing.Point(1209, 1326);
+            this.button5.Location = new System.Drawing.Point(382, 466);
+            this.button5.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(113, 76);
+            this.button5.Size = new System.Drawing.Size(36, 27);
             this.button5.TabIndex = 49;
             this.button5.Text = "5";
             this.button5.UseVisualStyleBackColor = false;
@@ -347,9 +365,10 @@
             // 
             this.button4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.button4.Location = new System.Drawing.Point(1050, 1326);
+            this.button4.Location = new System.Drawing.Point(332, 466);
+            this.button4.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(113, 76);
+            this.button4.Size = new System.Drawing.Size(36, 27);
             this.button4.TabIndex = 48;
             this.button4.Text = "4";
             this.button4.UseVisualStyleBackColor = false;
@@ -358,9 +377,10 @@
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.button3.Location = new System.Drawing.Point(887, 1326);
+            this.button3.Location = new System.Drawing.Point(280, 466);
+            this.button3.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(113, 76);
+            this.button3.Size = new System.Drawing.Size(36, 27);
             this.button3.TabIndex = 47;
             this.button3.Text = "3";
             this.button3.UseVisualStyleBackColor = false;
@@ -369,9 +389,10 @@
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(732, 1326);
+            this.button2.Location = new System.Drawing.Point(231, 466);
+            this.button2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(113, 76);
+            this.button2.Size = new System.Drawing.Size(36, 27);
             this.button2.TabIndex = 46;
             this.button2.Text = "2";
             this.button2.UseVisualStyleBackColor = false;
@@ -380,25 +401,28 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(578, 1326);
+            this.button1.Location = new System.Drawing.Point(183, 466);
+            this.button1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 76);
+            this.button1.Size = new System.Drawing.Size(36, 27);
             this.button1.TabIndex = 45;
             this.button1.Text = "1";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(1086, 1009);
+            this.textBox2.Location = new System.Drawing.Point(343, 355);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(518, 53);
+            this.textBox2.Size = new System.Drawing.Size(166, 23);
             this.textBox2.TabIndex = 44;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(270, 1025);
+            this.textBox1.Location = new System.Drawing.Point(85, 360);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(509, 53);
+            this.textBox1.Size = new System.Drawing.Size(163, 23);
             this.textBox1.TabIndex = 43;
             // 
             // label12
@@ -406,9 +430,10 @@
             this.label12.AutoSize = true;
             this.label12.CausesValidation = false;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(857, 1009);
+            this.label12.Location = new System.Drawing.Point(271, 355);
+            this.label12.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(154, 46);
+            this.label12.Size = new System.Drawing.Size(59, 17);
             this.label12.TabIndex = 42;
             this.label12.Text = "Name :";
             // 
@@ -417,9 +442,10 @@
             this.label13.AutoSize = true;
             this.label13.CausesValidation = false;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label13.Location = new System.Drawing.Point(101, 1025);
+            this.label13.Location = new System.Drawing.Point(32, 360);
+            this.label13.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(136, 46);
+            this.label13.Size = new System.Drawing.Size(54, 17);
             this.label13.TabIndex = 40;
             this.label13.Text = "Type :";
             // 
@@ -428,9 +454,10 @@
             this.label14.AutoSize = true;
             this.label14.CausesValidation = false;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label14.Location = new System.Drawing.Point(101, 1241);
+            this.label14.Location = new System.Drawing.Point(32, 436);
+            this.label14.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(1119, 46);
+            this.label14.Size = new System.Drawing.Size(438, 17);
             this.label14.TabIndex = 38;
             this.label14.Text = "Select the emotion button that reflects  how you are feeling";
             this.label14.Click += new System.EventHandler(this.label14_Click);
@@ -440,9 +467,10 @@
             this.label15.AutoSize = true;
             this.label15.CausesValidation = false;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label15.Location = new System.Drawing.Point(91, 928);
+            this.label15.Location = new System.Drawing.Point(29, 326);
+            this.label15.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(440, 46);
+            this.label15.Size = new System.Drawing.Size(172, 17);
             this.label15.TabIndex = 37;
             this.label15.Text = "Add meal to your List :";
             this.label15.Click += new System.EventHandler(this.label15_Click);
@@ -453,9 +481,10 @@
             this.label3.CausesValidation = false;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label3.Location = new System.Drawing.Point(749, 101);
+            this.label3.Location = new System.Drawing.Point(237, 35);
+            this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(359, 64);
+            this.label3.Size = new System.Drawing.Size(129, 24);
             this.label3.TabIndex = 36;
             this.label3.Text = "Meal Report ";
             // 
@@ -464,9 +493,10 @@
             this.label1.AutoSize = true;
             this.label1.CausesValidation = false;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(1013, 254);
+            this.label1.Location = new System.Drawing.Point(320, 89);
+            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(238, 46);
+            this.label1.Size = new System.Drawing.Size(92, 17);
             this.label1.TabIndex = 35;
             this.label1.Text = "Meal Time :";
             // 
@@ -475,9 +505,10 @@
             this.label4.AutoSize = true;
             this.label4.CausesValidation = false;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(80, 254);
+            this.label4.Location = new System.Drawing.Point(25, 89);
+            this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(222, 46);
+            this.label4.Size = new System.Drawing.Size(86, 17);
             this.label4.TabIndex = 34;
             this.label4.Text = "Meal Date:";
             // 
@@ -485,7 +516,8 @@
             // 
             this.monthCalendar1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.monthCalendar1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.monthCalendar1.Location = new System.Drawing.Point(382, 238);
+            this.monthCalendar1.Location = new System.Drawing.Point(121, 84);
+            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 33;
             // 
@@ -493,9 +525,10 @@
             // 
             this.buttonExit.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.buttonExit.Location = new System.Drawing.Point(1401, 1908);
+            this.buttonExit.Location = new System.Drawing.Point(442, 670);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(329, 98);
+            this.buttonExit.Size = new System.Drawing.Size(104, 34);
             this.buttonExit.TabIndex = 31;
             this.buttonExit.Text = "Exit";
             this.buttonExit.UseVisualStyleBackColor = false;
@@ -504,10 +537,11 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(60, 67);
+            this.tabControl1.Location = new System.Drawing.Point(19, 24);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(3023, 2194);
+            this.tabControl1.Size = new System.Drawing.Size(955, 771);
             this.tabControl1.TabIndex = 37;
             // 
             // tabPage1
@@ -515,10 +549,11 @@
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.tabPage1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tabPage1.Location = new System.Drawing.Point(12, 58);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(2999, 2124);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.tabPage1.Size = new System.Drawing.Size(947, 745);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Meal Report";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -528,13 +563,24 @@
             this.tabPage2.Controls.Add(this.button8);
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tabPage2.Location = new System.Drawing.Point(12, 58);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(2999, 2124);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.tabPage2.Size = new System.Drawing.Size(947, 745);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Advice Meal";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(553, 641);
+            this.button8.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(118, 28);
+            this.button8.TabIndex = 1;
+            this.button8.Text = "Exit";
+            this.button8.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -548,18 +594,31 @@
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(42, 68);
+            this.groupBox2.Location = new System.Drawing.Point(13, 24);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(2085, 1707);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.groupBox2.Size = new System.Drawing.Size(658, 600);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Advice Meal";
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(364, 54);
+            this.button7.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(115, 26);
+            this.button7.TabIndex = 45;
+            this.button7.Text = "Show";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(1437, 1425);
+            this.button6.Location = new System.Drawing.Point(454, 500);
+            this.button6.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(399, 50);
+            this.button6.Size = new System.Drawing.Size(126, 24);
             this.button6.TabIndex = 44;
             this.button6.Text = "Delete";
             this.button6.UseVisualStyleBackColor = true;
@@ -572,37 +631,41 @@
             "Snack",
             "Lunch",
             "Dinner"});
-            this.comboBox3.Location = new System.Drawing.Point(870, 1422);
+            this.comboBox3.Location = new System.Drawing.Point(275, 500);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(507, 54);
+            this.comboBox3.Size = new System.Drawing.Size(163, 24);
             this.comboBox3.TabIndex = 43;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(160, 1430);
+            this.label18.Location = new System.Drawing.Point(51, 502);
+            this.label18.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(681, 46);
+            this.label18.Size = new System.Drawing.Size(242, 17);
             this.label18.TabIndex = 42;
             this.label18.Text = "Choose the option you want to delete";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(91, 386);
+            this.label17.Location = new System.Drawing.Point(29, 136);
+            this.label17.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(404, 46);
+            this.label17.Size = new System.Drawing.Size(146, 17);
             this.label17.TabIndex = 41;
             this.label17.Text = "Here are your options";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(98, 474);
+            this.dataGridView1.Location = new System.Drawing.Point(31, 167);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 123;
             this.dataGridView1.RowTemplate.Height = 46;
-            this.dataGridView1.Size = new System.Drawing.Size(1902, 708);
+            this.dataGridView1.Size = new System.Drawing.Size(601, 249);
             this.dataGridView1.TabIndex = 40;
             // 
             // comboBox2
@@ -613,17 +676,19 @@
             "Snack",
             "Lunch",
             "Dinner"});
-            this.comboBox2.Location = new System.Drawing.Point(456, 228);
+            this.comboBox2.Location = new System.Drawing.Point(144, 80);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(507, 54);
+            this.comboBox2.Size = new System.Drawing.Size(163, 24);
             this.comboBox2.TabIndex = 39;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(91, 231);
+            this.label16.Location = new System.Drawing.Point(29, 81);
+            this.label16.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(205, 46);
+            this.label16.Size = new System.Drawing.Size(73, 17);
             this.label16.TabIndex = 38;
             this.label16.Text = "Meal Time";
             // 
@@ -636,45 +701,30 @@
             "Sad",
             "Axious",
             "Depressive"});
-            this.comboBox1.Location = new System.Drawing.Point(456, 105);
+            this.comboBox1.Location = new System.Drawing.Point(144, 37);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(507, 54);
+            this.comboBox1.Size = new System.Drawing.Size(163, 24);
             this.comboBox1.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(90, 108);
+            this.label5.Location = new System.Drawing.Point(28, 38);
+            this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(330, 46);
+            this.label5.Size = new System.Drawing.Size(117, 17);
             this.label5.TabIndex = 0;
             this.label5.Text = "How do you feel?";
             // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(1152, 153);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(363, 75);
-            this.button7.TabIndex = 45;
-            this.button7.Text = "Show";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(1752, 1823);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(374, 81);
-            this.button8.TabIndex = 1;
-            this.button8.Text = "Exit";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
             // Report
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(3183, 2337);
+            this.ClientSize = new System.Drawing.Size(985, 809);
             this.Controls.Add(this.tabControl1);
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.Name = "Report";
             this.Text = "Report";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

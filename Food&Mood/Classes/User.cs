@@ -18,7 +18,12 @@ namespace Food_Mood
         {
             this.name = user;
             this.password = password;
-            this.email = email;
+            //this.email = email;
+        }
+
+        public User(string name, string password, string email) : this(name, password)
+        {
+            Email = email;
         }
 
         public string Name { get => name; set => name = value; }

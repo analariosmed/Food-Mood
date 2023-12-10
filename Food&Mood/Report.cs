@@ -111,7 +111,7 @@ namespace Food_Mood
         private void trackBarMood_Scroll(object sender, EventArgs e)
         {
             string feeling;
-            feeling = trackBarMood.Value.ToString();
+            //feeling = trackBarMood.Value.ToString();
         }
 
         private void label15_Click(object sender, EventArgs e)

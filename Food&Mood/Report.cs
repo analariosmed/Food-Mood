@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Food_Mood.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,7 @@ namespace Food_Mood
         public Report()
         {
             InitializeComponent();
+            loadDishes();
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
@@ -128,6 +130,49 @@ namespace Food_Mood
         {
 
         }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //start=======================================augusto=======================================
+        private void loadDishes()
+        {
+            //DishesManager manager = new DishesManager();
+            DishesManager.loadDishes();
+            comboBoxDishes.Items.Clear();
+            foreach(var key in DishesManager.Dishes.Keys)
+            {
+                comboBoxDishes.Items.Add(key);
+            }
+          
+
+        }
+
+        private void loadDescription(object sender, EventArgs e)
+        {
+            var selectedDish = comboBoxDishes.Text;
+            string description = "";
+            var myDish = DishesManager.GetDish(selectedDish);
+            if (myDish != null)
+            {
+                foreach(var ing in myDish.Ingredients)
+                {
+                    description = description + $"Ingredient: {ing.Name}, Category: {ing.Category}, Size: {ing.Size}\n";
+                }
+            }
+            labelDishDescription.Text = description;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            var custom = new CustomDish();
+            this.Hide();
+            custom.Show();
+        }
+
+        //end=========================================augusto=======================================
     }
 }
 

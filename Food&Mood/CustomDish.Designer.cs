@@ -31,6 +31,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxDishName = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonAddNewIngredient = new System.Windows.Forms.Button();
+            this.comboBoxIngredientsName = new System.Windows.Forms.ComboBox();
+            this.comboBoxPortionSize = new System.Windows.Forms.ComboBox();
+            this.comboBoxCategories = new System.Windows.Forms.ComboBox();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonRemove = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
@@ -41,10 +45,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.buttonSaveDish = new System.Windows.Forms.Button();
             this.buttonCancelDish = new System.Windows.Forms.Button();
-            this.comboBoxCategories = new System.Windows.Forms.ComboBox();
-            this.comboBoxPortionSize = new System.Windows.Forms.ComboBox();
-            this.comboBoxIngredientsName = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDishIngredients)).BeginInit();
             this.SuspendLayout();
@@ -67,7 +67,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.buttonAddNewIngredient);
             this.groupBox1.Controls.Add(this.comboBoxIngredientsName);
             this.groupBox1.Controls.Add(this.comboBoxPortionSize);
             this.groupBox1.Controls.Add(this.comboBoxCategories);
@@ -83,6 +83,46 @@
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingredient";
+            // 
+            // buttonAddNewIngredient
+            // 
+            this.buttonAddNewIngredient.Location = new System.Drawing.Point(333, 160);
+            this.buttonAddNewIngredient.Name = "buttonAddNewIngredient";
+            this.buttonAddNewIngredient.Size = new System.Drawing.Size(141, 34);
+            this.buttonAddNewIngredient.TabIndex = 17;
+            this.buttonAddNewIngredient.Text = "New Igredient";
+            this.buttonAddNewIngredient.UseVisualStyleBackColor = true;
+            this.buttonAddNewIngredient.Click += new System.EventHandler(this.buttonAddNewIngredient_Click);
+            // 
+            // comboBoxIngredientsName
+            // 
+            this.comboBoxIngredientsName.FormattingEnabled = true;
+            this.comboBoxIngredientsName.Location = new System.Drawing.Point(158, 83);
+            this.comboBoxIngredientsName.Name = "comboBoxIngredientsName";
+            this.comboBoxIngredientsName.Size = new System.Drawing.Size(315, 24);
+            this.comboBoxIngredientsName.TabIndex = 16;
+            // 
+            // comboBoxPortionSize
+            // 
+            this.comboBoxPortionSize.FormattingEnabled = true;
+            this.comboBoxPortionSize.Items.AddRange(new object[] {
+            "Small",
+            "Medium",
+            "Large",
+            "X Large"});
+            this.comboBoxPortionSize.Location = new System.Drawing.Point(158, 121);
+            this.comboBoxPortionSize.Name = "comboBoxPortionSize";
+            this.comboBoxPortionSize.Size = new System.Drawing.Size(316, 24);
+            this.comboBoxPortionSize.TabIndex = 15;
+            // 
+            // comboBoxCategories
+            // 
+            this.comboBoxCategories.FormattingEnabled = true;
+            this.comboBoxCategories.Location = new System.Drawing.Point(111, 40);
+            this.comboBoxCategories.Name = "comboBoxCategories";
+            this.comboBoxCategories.Size = new System.Drawing.Size(363, 24);
+            this.comboBoxCategories.TabIndex = 14;
+            this.comboBoxCategories.SelectedIndexChanged += new System.EventHandler(this.loadIngredients);
             // 
             // buttonUpdate
             // 
@@ -179,45 +219,6 @@
             this.buttonCancelDish.UseVisualStyleBackColor = true;
             this.buttonCancelDish.Click += new System.EventHandler(this.buttonCancelDish_Click);
             // 
-            // comboBoxCategories
-            // 
-            this.comboBoxCategories.FormattingEnabled = true;
-            this.comboBoxCategories.Location = new System.Drawing.Point(111, 40);
-            this.comboBoxCategories.Name = "comboBoxCategories";
-            this.comboBoxCategories.Size = new System.Drawing.Size(363, 24);
-            this.comboBoxCategories.TabIndex = 14;
-            this.comboBoxCategories.SelectedIndexChanged += new System.EventHandler(this.loadIngredients);
-            // 
-            // comboBoxPortionSize
-            // 
-            this.comboBoxPortionSize.FormattingEnabled = true;
-            this.comboBoxPortionSize.Items.AddRange(new object[] {
-            "Small",
-            "Medium",
-            "Large",
-            "X Large"});
-            this.comboBoxPortionSize.Location = new System.Drawing.Point(158, 121);
-            this.comboBoxPortionSize.Name = "comboBoxPortionSize";
-            this.comboBoxPortionSize.Size = new System.Drawing.Size(316, 24);
-            this.comboBoxPortionSize.TabIndex = 15;
-            // 
-            // comboBoxIngredientsName
-            // 
-            this.comboBoxIngredientsName.FormattingEnabled = true;
-            this.comboBoxIngredientsName.Location = new System.Drawing.Point(158, 83);
-            this.comboBoxIngredientsName.Name = "comboBoxIngredientsName";
-            this.comboBoxIngredientsName.Size = new System.Drawing.Size(315, 24);
-            this.comboBoxIngredientsName.TabIndex = 16;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(333, 160);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 34);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "New Igredient";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // CustomDish
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -231,7 +232,7 @@
             this.Controls.Add(this.textBoxDishName);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CustomDish";
             this.Text = " ";
             this.groupBox1.ResumeLayout(false);
@@ -260,6 +261,6 @@
         private System.Windows.Forms.ComboBox comboBoxCategories;
         private System.Windows.Forms.ComboBox comboBoxIngredientsName;
         private System.Windows.Forms.ComboBox comboBoxPortionSize;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAddNewIngredient;
     }
 }

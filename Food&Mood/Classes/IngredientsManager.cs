@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Food_Mood.Classes
 {
@@ -19,19 +17,24 @@ namespace Food_Mood.Classes
         {
             string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
 
-            string filePath = Path.Combine(baseDirectory, "Resources\\Ingredients.txt");
+            string filePath = Path.Combine(baseDirectory, "Resources\\Ingredients.csv");
 
             if (File.Exists(filePath))
             {
 
                 using (var reader = new StreamReader(filePath))
                 {
-                    do
+                    // Read and ignore the header row
+                    string headerLine = reader.ReadLine();
+
+                    while (!reader.EndOfStream)
                     {
-                        var category = reader.ReadLine();
-                        var name = reader.ReadLine();
+                        string line = reader.ReadLine();
+                        string[] values = line.Split(',');
+                        var category = values[0];
+                        var name = values[1];
                         addIngredient(new Ingredient(category, name));
-                    } while (!reader.EndOfStream);
+                    }
                 }
             }
         }
@@ -39,6 +42,7 @@ namespace Food_Mood.Classes
         public static void addIngredient(Ingredient ingredient)
         {
             Ingredients.Add(ingredient);
+            //saveIngredientToFile(ingredient);
         }
 
         public static void loadCategories()
@@ -61,6 +65,20 @@ namespace Food_Mood.Classes
                 if(ing.Category == category) ingredientsName.Add(ing.Name);
             }
             IngredientsName = ingredientsName.ToList();
+        }
+
+        private static void saveIngredientToFile(Ingredient ingredient)
+        {
+            string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+
+            string filePath = Path.Combine(baseDirectory, "Resources\\Ingredients.csv");
+
+            //write the dish information on the file
+            using (StreamWriter streamWriter = new StreamWriter(filePath, true))
+            {
+                streamWriter.WriteLine($"{ingredient.Category},{ingredient.Name}");
+            }
+ 
         }
     }
 }

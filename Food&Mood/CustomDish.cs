@@ -148,7 +148,11 @@ namespace Food_Mood
                         }
                     }
                 }
+
             }
+            var report = new Report();
+            this.Close();
+            report.Show();
         }
 
         private void buttonCancelDish_Click(object sender, EventArgs e)
@@ -164,6 +168,11 @@ namespace Food_Mood
             IngredientsManager.loadIngredientName(category);
             //fill the combobox with the returned names
             comboBoxIngredientsName.DataSource = IngredientsManager.IngredientsName;
+        }
+
+        private void buttonAddNewIngredient_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

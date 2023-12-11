@@ -77,6 +77,12 @@
             this.label16 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.comboBoxDishes = new System.Windows.Forms.ComboBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.labelDishDescription = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
+            this.label22 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -109,7 +115,7 @@
             "Lunch",
             "Dinner"});
             this.checkedListBoxMealTime.Location = new System.Drawing.Point(394, 114);
-            this.checkedListBoxMealTime.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.checkedListBoxMealTime.Margin = new System.Windows.Forms.Padding(1);
             this.checkedListBoxMealTime.Name = "checkedListBoxMealTime";
             this.checkedListBoxMealTime.Size = new System.Drawing.Size(104, 76);
             this.checkedListBoxMealTime.TabIndex = 10;
@@ -129,7 +135,7 @@
             "Cereal",
             "Soy Product"});
             this.comboBoxType.Location = new System.Drawing.Point(82, 288);
-            this.comboBoxType.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.comboBoxType.Margin = new System.Windows.Forms.Padding(1);
             this.comboBoxType.Name = "comboBoxType";
             this.comboBoxType.Size = new System.Drawing.Size(166, 26);
             this.comboBoxType.TabIndex = 12;
@@ -180,7 +186,7 @@
             "Carrots",
             "Zucchini"});
             this.comboBoxName.Location = new System.Drawing.Point(343, 289);
-            this.comboBoxName.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.comboBoxName.Margin = new System.Windows.Forms.Padding(1);
             this.comboBoxName.Name = "comboBoxName";
             this.comboBoxName.Size = new System.Drawing.Size(166, 26);
             this.comboBoxName.TabIndex = 14;
@@ -263,7 +269,7 @@
             this.buttonSave.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.buttonSave.Location = new System.Drawing.Point(447, 613);
-            this.buttonSave.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.buttonSave.Margin = new System.Windows.Forms.Padding(1);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(95, 29);
             this.buttonSave.TabIndex = 25;
@@ -274,7 +280,7 @@
             // 
             this.pictureBox1.Image = global::Food_Mood.Properties.Resources.all;
             this.pictureBox1.Location = new System.Drawing.Point(68, 502);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(472, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -286,7 +292,7 @@
             this.buttonAdd.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.buttonAdd.Location = new System.Drawing.Point(216, 607);
-            this.buttonAdd.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(1);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(95, 29);
             this.buttonAdd.TabIndex = 28;
@@ -299,7 +305,7 @@
             this.buttonRemove.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.buttonRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.buttonRemove.Location = new System.Drawing.Point(332, 609);
-            this.buttonRemove.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.buttonRemove.Margin = new System.Windows.Forms.Padding(1);
             this.buttonRemove.Name = "buttonRemove";
             this.buttonRemove.Size = new System.Drawing.Size(95, 29);
             this.buttonRemove.TabIndex = 29;
@@ -340,9 +346,9 @@
             this.groupBox1.Controls.Add(this.checkedListBoxMealTime);
             this.groupBox1.Controls.Add(this.labelItem);
             this.groupBox1.Location = new System.Drawing.Point(9, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(1);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(1);
             this.groupBox1.Size = new System.Drawing.Size(568, 714);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
@@ -354,7 +360,7 @@
             this.button5.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.button5.Location = new System.Drawing.Point(382, 466);
-            this.button5.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.button5.Margin = new System.Windows.Forms.Padding(1);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(36, 27);
             this.button5.TabIndex = 49;
@@ -366,7 +372,7 @@
             this.button4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.button4.Location = new System.Drawing.Point(332, 466);
-            this.button4.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.button4.Margin = new System.Windows.Forms.Padding(1);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(36, 27);
             this.button4.TabIndex = 48;
@@ -378,7 +384,7 @@
             this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.button3.Location = new System.Drawing.Point(280, 466);
-            this.button3.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.button3.Margin = new System.Windows.Forms.Padding(1);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(36, 27);
             this.button3.TabIndex = 47;
@@ -390,7 +396,7 @@
             this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.button2.Location = new System.Drawing.Point(231, 466);
-            this.button2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.button2.Margin = new System.Windows.Forms.Padding(1);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(36, 27);
             this.button2.TabIndex = 46;
@@ -402,7 +408,7 @@
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.button1.Location = new System.Drawing.Point(183, 466);
-            this.button1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.button1.Margin = new System.Windows.Forms.Padding(1);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(36, 27);
             this.button1.TabIndex = 45;
@@ -412,7 +418,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(343, 355);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(1);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(166, 23);
             this.textBox2.TabIndex = 44;
@@ -420,7 +426,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(85, 360);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(1);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(163, 23);
             this.textBox1.TabIndex = 43;
@@ -517,7 +523,7 @@
             this.monthCalendar1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.monthCalendar1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.monthCalendar1.Location = new System.Drawing.Point(121, 84);
-            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(3);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 33;
             // 
@@ -526,7 +532,7 @@
             this.buttonExit.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.buttonExit.Location = new System.Drawing.Point(442, 670);
-            this.buttonExit.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(1);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(104, 34);
             this.buttonExit.TabIndex = 31;
@@ -538,7 +544,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(19, 24);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(955, 771);
@@ -546,17 +552,24 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label22);
+            this.tabPage1.Controls.Add(this.button9);
+            this.tabPage1.Controls.Add(this.labelDishDescription);
+            this.tabPage1.Controls.Add(this.label20);
+            this.tabPage1.Controls.Add(this.comboBoxDishes);
+            this.tabPage1.Controls.Add(this.label19);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.tabPage1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(1);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(1);
             this.tabPage1.Size = new System.Drawing.Size(947, 745);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Meal Report";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // tabPage2
             // 
@@ -564,9 +577,9 @@
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(1);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(1);
             this.tabPage2.Size = new System.Drawing.Size(947, 745);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Advice Meal";
@@ -575,7 +588,7 @@
             // button8
             // 
             this.button8.Location = new System.Drawing.Point(553, 641);
-            this.button8.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.button8.Margin = new System.Windows.Forms.Padding(1);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(118, 28);
             this.button8.TabIndex = 1;
@@ -595,9 +608,9 @@
             this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Location = new System.Drawing.Point(13, 24);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(1);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(1);
             this.groupBox2.Size = new System.Drawing.Size(658, 600);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
@@ -606,7 +619,7 @@
             // button7
             // 
             this.button7.Location = new System.Drawing.Point(364, 54);
-            this.button7.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.button7.Margin = new System.Windows.Forms.Padding(1);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(115, 26);
             this.button7.TabIndex = 45;
@@ -616,7 +629,7 @@
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(454, 500);
-            this.button6.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.button6.Margin = new System.Windows.Forms.Padding(1);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(126, 24);
             this.button6.TabIndex = 44;
@@ -632,7 +645,7 @@
             "Lunch",
             "Dinner"});
             this.comboBox3.Location = new System.Drawing.Point(275, 500);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(1);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(163, 24);
             this.comboBox3.TabIndex = 43;
@@ -661,7 +674,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(31, 167);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(1);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 123;
             this.dataGridView1.RowTemplate.Height = 46;
@@ -677,7 +690,7 @@
             "Lunch",
             "Dinner"});
             this.comboBox2.Location = new System.Drawing.Point(144, 80);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(1);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(163, 24);
             this.comboBox2.TabIndex = 39;
@@ -702,7 +715,7 @@
             "Axious",
             "Depressive"});
             this.comboBox1.Location = new System.Drawing.Point(144, 37);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(1);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(163, 24);
             this.comboBox1.TabIndex = 1;
@@ -717,6 +730,64 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "How do you feel?";
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.CausesValidation = false;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label19.Location = new System.Drawing.Point(602, 239);
+            this.label19.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(130, 17);
+            this.label19.TabIndex = 32;
+            this.label19.Text = "Select your dish:";
+            // 
+            // comboBoxDishes
+            // 
+            this.comboBoxDishes.FormattingEnabled = true;
+            this.comboBoxDishes.Location = new System.Drawing.Point(605, 270);
+            this.comboBoxDishes.Name = "comboBoxDishes";
+            this.comboBoxDishes.Size = new System.Drawing.Size(328, 24);
+            this.comboBoxDishes.TabIndex = 33;
+            this.comboBoxDishes.SelectedIndexChanged += new System.EventHandler(this.loadDescription);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(602, 308);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(119, 17);
+            this.label20.TabIndex = 34;
+            this.label20.Text = "Dish composition:";
+            // 
+            // labelDishDescription
+            // 
+            this.labelDishDescription.AutoSize = true;
+            this.labelDishDescription.Location = new System.Drawing.Point(602, 336);
+            this.labelDishDescription.Name = "labelDishDescription";
+            this.labelDishDescription.Size = new System.Drawing.Size(119, 17);
+            this.labelDishDescription.TabIndex = 35;
+            this.labelDishDescription.Text = "Dish composition:";
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(605, 445);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(328, 23);
+            this.button9.TabIndex = 36;
+            this.button9.Text = "Add custom Dish";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(753, 424);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(29, 17);
+            this.label22.TabIndex = 37;
+            this.label22.Text = "OR";
+            // 
             // Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -724,7 +795,7 @@
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(985, 809);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "Report";
             this.Text = "Report";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -732,6 +803,7 @@
             this.groupBox1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -790,5 +862,11 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label labelDishDescription;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ComboBox comboBoxDishes;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Button button9;
     }
 }

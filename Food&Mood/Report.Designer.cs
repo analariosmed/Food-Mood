@@ -100,6 +100,7 @@
             this.checkedListBoxMealTime.Name = "checkedListBoxMealTime";
             this.checkedListBoxMealTime.Size = new System.Drawing.Size(321, 160);
             this.checkedListBoxMealTime.TabIndex = 10;
+            this.checkedListBoxMealTime.SelectedIndexChanged += new System.EventHandler(this.checkedListBoxMealTime_SelectedIndexChanged);
             // 
             // buttonSave
             // 
@@ -424,6 +425,7 @@
             this.monthCalendar1.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 33;
+            this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
             // 
             // tabControl1
             // 

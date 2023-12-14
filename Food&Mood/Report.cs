@@ -1,9 +1,11 @@
 ﻿using Food_Mood.Classes;
+using Food_Mood.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Security.Policy;
 using System.Text;
@@ -23,6 +25,13 @@ namespace Food_Mood
         int firstEmotion;
 
         int finalEmotion;
+
+        int indice;
+
+        string mealTime;
+
+        DateTime reportDate;
+
 
 
         public Report()
@@ -220,12 +229,49 @@ namespace Food_Mood
         {
             int emotionResult = finalEmotion - firstEmotion;
 
+            string filePath = "C:\\Users\\ANA\\source\\repos\\Object Oriented\\Food & Mood\\Food & Mood\\Resources\\Report.csv";
+
+            // Content to write to the file ---Miss the dish name
+         
+            string content = Convert.ToString(reportDate) + mealTime + Convert.ToInt32(emotionResult);
+
+            try
+            {
+                // Open the file for writing, creating it if it doesn't exist
+                using (StreamWriter writer = new StreamWriter(filePath))
+                {
+                    // Write the content to the file
+                    writer.WriteLine(content);
+                }
+
+                Console.WriteLine("Content written to the file successfully.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
 
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        public void checkedListBoxMealTime_SelectedIndexChanged(object sender, EventArgs e)
+        {
+             indice = checkedListBoxMealTime.SelectedIndex;
+
+            if (indice != -1)
+            {
+                mealTime = checkedListBoxMealTime.Items[indice].ToString(); ;
+            }
+
+        }
+
+        private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
+        {
+           reportDate = monthCalendar1.SelectionStart;
         }
     }
 }

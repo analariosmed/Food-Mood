@@ -11,9 +11,6 @@ namespace Food_Mood
 {
     public partial class CustomDish : Form
     {
-        //TODO: 
-        //Implement the button Custom Ingredient
-        //Implement the button Cancel
 
         private List<Ingredient> dishIngredients = new List<Ingredient>();
 
@@ -150,16 +147,19 @@ namespace Food_Mood
                 }
 
             }
-            var report = new Report();
-            this.Close();
-            report.Show();
+            goBackToReportForm();
         }
 
         private void buttonCancelDish_Click(object sender, EventArgs e)
         {
-
+            goBackToReportForm();
         }
-
+        private void goBackToReportForm()
+        {
+            var report = new Report();
+            this.Close();
+            report.Show();
+        }
         private void loadIngredients(object sender, EventArgs e)
         {
             //take the selected category to filter the ingredients names

@@ -15,13 +15,13 @@ using MessageBox = System.Windows.MessageBox;
 
 namespace Food_Mood
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
         string User = "1";
         string Password = "1234";
 
         
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
             UserManager.loadUsers();

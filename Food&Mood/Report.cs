@@ -14,6 +14,7 @@ using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
+using Application = System.Windows.Forms.Application;
 
 namespace Food_Mood
 {
@@ -262,6 +263,11 @@ namespace Food_Mood
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
         {
            reportDate = monthCalendar1.SelectionStart;
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

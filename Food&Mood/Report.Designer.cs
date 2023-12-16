@@ -89,6 +89,7 @@
             // checkedListBoxMealTime
             // 
             this.checkedListBoxMealTime.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.checkedListBoxMealTime.CheckOnClick = true;
             this.checkedListBoxMealTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkedListBoxMealTime.FormattingEnabled = true;
             this.checkedListBoxMealTime.Items.AddRange(new object[] {

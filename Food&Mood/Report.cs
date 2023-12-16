@@ -1,19 +1,8 @@
 ﻿using Food_Mood.Classes;
-using Food_Mood.Properties;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 using Application = System.Windows.Forms.Application;
 
 namespace Food_Mood
@@ -33,119 +22,20 @@ namespace Food_Mood
 
         DateTime reportDate;
 
-
-
         public Report()
         {
             InitializeComponent();
             loadDishes();
         }
 
-        private void buttonAdd_Click(object sender, EventArgs e)
-        {
-            //Meal newMeal = new Meal();
-
-            ////Key in my dictionary
-            //newMeal.Type = comboBoxType.Text;
-            //newMeal.Name = comboBoxName.Text;
-            //newMeal.TriptoQty = 0;
-
-            ////string value in my dictionary 
-            //string mealtime = checkedListBoxMealTime.Text;
-
-            ////Add info to my dictionary
-            //mealDictionary.Add(newMeal, mealtime);
-
-            ////Show information in Table
-            //loadData();
-
-        }
-
-        //private void loadData()
-        //{
-        //    DataTable dt = new DataTable();
-
-        //    dt.Columns.Add("Type of meal : ");
-        //    dt.Columns.Add("Name : ");
-        //    dt.Columns.Add("Feeling : ");
-        //    dt.Columns.Add("Meal Time : ");
-
-        //    foreach (var newMeal in mealDictionary)
-        //    {
-        //        dt.Rows.Add(newMeal.Key.Type, newMeal.Key.Name, newMeal.Key.TriptoQty, mealDictionary.Values);
-
-        //    }
-
-        //    dataGridView1.DataSource = dt;
-
-        //}
-
-        //private void comboBoxType_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-
-        //}
-        //private void comboBoxName_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    comboBoxName.Items.Clear();
-        //    List<string> foodList = new List<string>();
-
-        //    switch (comboBoxType.SelectedIndex)
-        //    {
-        //        case 0:
-        //            string[] frute = { "Banana", "Apple", "Strawberry" };
-        //            foodList = frute.ToList();
-        //            break;
-
-        //        case 1:
-        //            string[] legumes = { "Beans", "Lentils", "Peas", "Soybeans", "Peanut" };
-        //            foodList = legumes.ToList();
-        //            break;
-
-        //        case 2:
-        //            string[] meet = { "Chicken", "Turkey", "Beef", "Lamb", "Pork" };
-        //            foodList = meet.ToList();
-        //            break;
-
-        //        case 3:
-        //            string[] vegetables = { "Potatoe", "Onion", "Spinach", "Carrot ", "Spinach", "Broccoli" };
-        //            foodList = vegetables.ToList();
-        //            break;
-
-        //        case 4:
-        //            string[] cereals = { "Rice", "Oats", "Quinoa", "Millet", "Sorghum" };
-        //            foodList = cereals.ToList();
-        //            break;
-
-        //    }
-
-        //    foreach (string foodT in foodList)
-        //    {
-        //        comboBoxName.Items.Add(foodT);
-        //    }
-        //    comboBoxType.Enabled = false;
-        //}
-
-
-        //private void trackBarMood_Scroll(object sender, EventArgs e)
-        //{
-        //    string feeling;
-        //    //feeling = trackBarMood.Value.ToString();
-        //}
-
-
-
-        //start=======================================augusto=======================================
         private void loadDishes()
         {
-            //DishesManager manager = new DishesManager();
             DishesManager.loadDishes();
             comboBoxDishes.Items.Clear();
             foreach (var key in DishesManager.Dishes.Keys)
             {
                 comboBoxDishes.Items.Add(key);
             }
-
-
         }
 
         private void loadDescription(object sender, EventArgs e)
@@ -170,88 +60,87 @@ namespace Food_Mood
             custom.Show();
         }
 
-        public void groupBox3_Enter(object sender, EventArgs e)
+        private int GetFirstEmotion()
         {
-
-
             if (radioButtonHappy.Checked)
-            { firstEmotion = 5; }
+            { return firstEmotion = 5; }
             else
             if (radioButtonCalm.Checked)
-            { firstEmotion = 4; }
+            { return firstEmotion = 4; }
             else
                 if (radioButtonAnxious.Checked)
-            { firstEmotion = 3; }
+            { return firstEmotion = 3; }
             else
-               if (radioButtonSad.Checked)
-            { firstEmotion = 2; }
+                if (radioButtonSad.Checked)
+            { return firstEmotion = 2; }
             else
                 if (radioButtonDepressive.Checked)
-            { firstEmotion = 1; }
-            else
-            {
-                MessageBox.Show("Select one emotion");
-            }
-
+            { return firstEmotion = 1; }
+            else return 0;
         }
 
-        public void groupBoxAfter_Enter(object sender, EventArgs e)
+        private int GetFinalEmotion()
         {
-
-            if (radioButtonHappy.Checked)
-            { finalEmotion = 5; }
-            else
-            if (radioButtonCalm.Checked)
-            { finalEmotion = 4; }
-            else
-                if (radioButtonAnxious.Checked)
-            { finalEmotion = 3; }
-            else
-               if (radioButtonSad.Checked)
-            { finalEmotion = 2; }
-            else
-                if (radioButtonDepressive.Checked)
-            { finalEmotion = 1; }
-            else
-            {
-                MessageBox.Show("Select one emotion");
-            }
-
-
+            if (radioButton10.Checked)
+            { return finalEmotion = 5; }
+            else if (radioButton8.Checked)
+            { return finalEmotion = 4; }
+            else if (radioButton6.Checked)
+            { return finalEmotion = 3; }
+            else if (radioButton9.Checked)
+            { return finalEmotion = 2; }
+            else if (radioButton7.Checked)
+            { return finalEmotion = 1; }
+            else  return 0;
         }
 
 
         public void buttonSave_Click(object sender, EventArgs e)
         {
-            int emotionResult = finalEmotion - firstEmotion;
+            var intEmot = GetFirstEmotion();
+            var finEmot = GetFinalEmotion();
+            var emotionResult = 0;
+            if ((intEmot == 0) || (finEmot == 0)){
+                MessageBox.Show("Please, informe how you fell before and after eating");
+            }
+            else
+            {
+                emotionResult = finEmot - intEmot;
+            }
 
-            string filePath = "C:\\Users\\ANA\\source\\repos\\Object Oriented\\Food & Mood\\Food & Mood\\Resources\\Report.csv";
 
-            // Content to write to the file ---Miss the dish name
-         
-            string content = Convert.ToString(reportDate) + mealTime + Convert.ToInt32(emotionResult);
+            //get the base directory according to the local where the app is stored on the users machine
+            string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            //define the final path of the file where we are going to save the meals report
+            string filePath = Path.Combine(baseDirectory, "Resources\\Report.csv");
+            //build the content to be saved into the file
+            string content = $"{UserManager.CurrentUser.Email}," +
+                $"{Convert.ToString(reportDate)}, " +
+                $"{mealTime}, " +
+                $"{comboBoxDishes.SelectedItem}," +
+                $"{Convert.ToInt32(emotionResult)}";
 
             try
             {
                 // Open the file for writing, creating it if it doesn't exist
-                using (StreamWriter writer = new StreamWriter(filePath))
+                using (StreamWriter writer = new StreamWriter(filePath, true))
                 {
                     // Write the content to the file
                     writer.WriteLine(content);
                 }
 
-                Console.WriteLine("Content written to the file successfully.");
+                MessageBox.Show("Meal saved successfully.");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"An error occurred: {ex.Message}");
+                MessageBox.Show($"An error occurred: {ex.Message}");
             }
 
         }
 
         public void checkedListBoxMealTime_SelectedIndexChanged(object sender, EventArgs e)
         {
-             indice = checkedListBoxMealTime.SelectedIndex;
+            indice = checkedListBoxMealTime.SelectedIndex;
 
             if (indice != -1)
             {

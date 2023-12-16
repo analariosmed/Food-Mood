@@ -26,6 +26,7 @@ namespace Food_Mood
         {
             InitializeComponent();
             loadDishes();
+            LoadSuggestedDishes();
         }
 
         private void loadDishes()
@@ -62,36 +63,22 @@ namespace Food_Mood
 
         private int GetFirstEmotion()
         {
-            if (radioButtonHappy.Checked)
-            { return firstEmotion = 5; }
-            else
-            if (radioButtonCalm.Checked)
-            { return firstEmotion = 4; }
-            else
-                if (radioButtonAnxious.Checked)
-            { return firstEmotion = 3; }
-            else
-                if (radioButtonSad.Checked)
-            { return firstEmotion = 2; }
-            else
-                if (radioButtonDepressive.Checked)
-            { return firstEmotion = 1; }
+            if (radioButtonHappy.Checked) return 5;
+            else if (radioButtonCalm.Checked) return 4;
+            else if (radioButtonAnxious.Checked) return 3;
+            else if (radioButtonSad.Checked) return 2;
+            else if (radioButtonDepressive.Checked) return 1;
             else return 0;
         }
 
         private int GetFinalEmotion()
         {
-            if (radioButton10.Checked)
-            { return finalEmotion = 5; }
-            else if (radioButton8.Checked)
-            { return finalEmotion = 4; }
-            else if (radioButton6.Checked)
-            { return finalEmotion = 3; }
-            else if (radioButton9.Checked)
-            { return finalEmotion = 2; }
-            else if (radioButton7.Checked)
-            { return finalEmotion = 1; }
-            else  return 0;
+            if (radioButton10.Checked) return 5;
+            else if (radioButton8.Checked) return 4;
+            else if (radioButton6.Checked) return 3;
+            else if (radioButton9.Checked) return 2;
+            else if (radioButton7.Checked) return 1;
+            else return 0;
         }
 
 
@@ -158,34 +145,74 @@ namespace Food_Mood
         {
             Application.Exit();
         }
+
+        private void buttonAdviceExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void buttonReportSuggestedMeal_Click(object sender, EventArgs e)
+        {
+            //TODO:
+            //get the selected dishname, mode and the category
+            //change the tab
+            //use the captured values to fill the gaps.
+
+        }
+        private void LoadSuggestedDishes()
+        {
+            //TODO:
+            //Filter by best increment into the mood
+            //Filter by category (breakfest, lunch, snack or dinner)
+
+            ReportManager.LoadReports();
+            var dt = new System.Data.DataTable();
+            dt.Columns.Clear();
+            dt.Rows.Clear();
+            dt.Columns.Add("Dish Name");
+
+            HashSet<string> uniqueValues = new HashSet<string>();
+
+            foreach (var dish in ReportManager.ReportList)
+            {
+                uniqueValues.Add(dish.DishName);
+            }
+            
+            foreach(var uniqueDish in uniqueValues)
+            {
+                dt.Rows.Add(uniqueDish);
+            }
+
+            dataGridViewSuggestedDishes.DataSource = dt;
+            dataGridViewSuggestedDishes.AutoResizeColumns();
+        }
+
+        private void UpdateIngredients(object sender, EventArgs e)
+        {
+            var dt = new System.Data.DataTable();
+            dt.Columns.Clear();
+            dt.Rows.Clear();
+            dt.Columns.Add("Category");
+            dt.Columns.Add("Name");
+
+            var selectedDish = dataGridViewSuggestedDishes.SelectedCells[0].Value.ToString().Trim();
+            //MessageBox.Show(selectedDish);
+            DishesManager.loadDishes();
+            var myDish = DishesManager.GetDish(selectedDish);
+
+
+            if (myDish != null)
+            {
+                foreach (var ing in myDish.Ingredients)
+                {
+                    dt.Rows.Add(ing.Category, ing.Name );
+                }
+            }
+            dataGridViewSuggestedDisheIngredients.DataSource = dt;
+            dataGridViewSuggestedDisheIngredients.AutoResizeColumns();
+        }
     }
 }
-
-//private void buttonRemove_Click(object sender, EventArgs e)
-//{
-
-//    Meal mealToDelete = new Meal();
-//    mealToDelete.Name = Convert.ToString(comboBoxName.Text);
-
-//    foreach (var meal in mealDictionary)
-//    {
-//        if (meal.Key.Name == mealToDelete)
-//        {
-//            mealDictionary.Remove(mealToDelete);
-//        }
-//    }
-//    loadData(); 
-
-//}
-
-//public void buttonExit_Click(object sender, EventArgs e)
-//{
-// //  Application.Exit();
-//}
-
-//private void Report_Load(object sender, EventArgs e)
-//{
-//    comboBoxType.Items.Add("Cereal");
 
 
 

@@ -52,6 +52,8 @@
     <Compile Include="Classes\DishesManager.cs" />
     <Compile Include="Classes\Ingredient.cs" />
     <Compile Include="Classes\IngredientsManager.cs" />
+    <Compile Include="Classes\Report.cs" />
+    <Compile Include="Classes\ReportManager.cs" />
     <Compile Include="Classes\UserManager.cs" />
     <Compile Include="CustomDish.cs">
       <SubType>Form</SubType>

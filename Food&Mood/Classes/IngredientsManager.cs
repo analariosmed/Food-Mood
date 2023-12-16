@@ -67,7 +67,7 @@ namespace Food_Mood.Classes
             IngredientsName = ingredientsName.ToList();
         }
 
-        private static void saveIngredientToFile(Ingredient ingredient)
+        public static void saveIngredientToFile(Ingredient ingredient)
         {
             string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
 

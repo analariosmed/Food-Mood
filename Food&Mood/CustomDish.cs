@@ -172,7 +172,9 @@ namespace Food_Mood
 
         private void buttonAddNewIngredient_Click(object sender, EventArgs e)
         {
-
+            Form newIngredient = new NewIngredient();
+            this.Close();
+            newIngredient.Show();
         }
     }
 }

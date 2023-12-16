@@ -169,11 +169,6 @@ namespace Food_Mood
             custom.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         public void groupBox3_Enter(object sender, EventArgs e)
         {
 
@@ -253,11 +248,6 @@ namespace Food_Mood
 
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         public void checkedListBoxMealTime_SelectedIndexChanged(object sender, EventArgs e)
         {
              indice = checkedListBoxMealTime.SelectedIndex;
@@ -272,11 +262,6 @@ namespace Food_Mood
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
         {
            reportDate = monthCalendar1.SelectionStart;
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

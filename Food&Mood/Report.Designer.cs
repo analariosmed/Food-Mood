@@ -144,7 +144,6 @@
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Report";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // groupBoxAfter
             // 
@@ -330,7 +329,6 @@
             this.label2.Size = new System.Drawing.Size(460, 17);
             this.label2.TabIndex = 39;
             this.label2.Text = "Select the emotion that reflects how you felt before your meal:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // button9
             // 

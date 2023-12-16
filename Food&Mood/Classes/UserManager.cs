@@ -7,6 +7,8 @@ namespace Food_Mood.Classes
 {
     public static class UserManager
     {
+        public static User CurrentUser { get; set; }
+
         private static List<User> users = new List<User>();
         public static List<User> Users { get {  return users; } }
 
@@ -14,7 +16,7 @@ namespace Food_Mood.Classes
         {
             Users.Add(user);
         }
-
+        //save users to the file
         public static void saveUsers()
         {
             string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
@@ -32,7 +34,7 @@ namespace Food_Mood.Classes
                 }
             }
         }
-
+        //load the users from file to use then on the login feature
         public static void loadUsers()
         {
             string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;

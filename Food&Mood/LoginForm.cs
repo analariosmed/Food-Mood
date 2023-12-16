@@ -1,26 +1,12 @@
 ﻿using Food_Mood.Classes;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using MessageBox = System.Windows.MessageBox;
 
 namespace Food_Mood
 {
     public partial class LoginForm : Form
     {
-        string User = "1";
-        string Password = "1234";
-
-        
         public LoginForm()
         {
             InitializeComponent();
@@ -47,6 +33,7 @@ namespace Food_Mood
             var user = textBoxUser.Text;
             var password = textBoxPassword.Text;
             var myUser = UserManager.Users.Find(x => x.Name == user);
+            UserManager.CurrentUser = myUser;
             if (myUser != null)
             {
                 return myUser.Password == password;
@@ -56,11 +43,9 @@ namespace Food_Mood
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            NewAccount  formAccount= new NewAccount();
+            NewAccount  formAccount = new NewAccount();
             formAccount.Show();
             this.Hide();
-
-           
         }
     }
 }

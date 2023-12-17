@@ -10,7 +10,7 @@ namespace Food_Mood.Classes
         public static User CurrentUser { get; set; }
 
         private static List<User> users = new List<User>();
-        public static List<User> Users { get {  return users; } }
+        public static List<User> Users { get { return users; } }
 
         public static void addUser(User user)
         {
@@ -54,7 +54,7 @@ namespace Food_Mood.Classes
                         addUser(new User(name, password, email));
                     } while (!reader.EndOfStream);
                 }
-  
+
             }
         }
     }

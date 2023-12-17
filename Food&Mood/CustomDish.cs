@@ -3,8 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
-using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
 namespace Food_Mood
@@ -22,7 +20,7 @@ namespace Food_Mood
             //loading the categories to fill the combobox
             IngredientsManager.loadCategories();
             //setting the combobox data source
-            comboBoxCategories.DataSource = IngredientsManager.Categories; 
+            comboBoxCategories.DataSource = IngredientsManager.Categories;
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
@@ -59,7 +57,7 @@ namespace Food_Mood
             dt.Columns.Add("Portion Size");
 
             //add value to the rows
-            foreach(var ing in dishIngredients)
+            foreach (var ing in dishIngredients)
             {
                 dt.Rows.Add(ing.Category, ing.Name, ing.Size);
             }
@@ -78,7 +76,7 @@ namespace Food_Mood
             //search on the list
             var myIng = dishIngredients.Find(x => x.Equals(ingToFind));
             //if foud the object to remove
-            if(myIng != null)
+            if (myIng != null)
             {
                 //remove the ingredient from the list
                 dishIngredients.Remove(myIng);
@@ -130,7 +128,7 @@ namespace Food_Mood
             else
             {
                 //validate if the dish has ingredients
-                if(dishIngredients.Count <= 0)
+                if (dishIngredients.Count <= 0)
                 {
                     MessageBox.Show("Please, Add ingredients to the dish!");
                 }

@@ -64,16 +64,16 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.buttonReportSuggestedMeal = new System.Windows.Forms.Button();
+            this.buttonAdviceExit = new System.Windows.Forms.Button();
+            this.dataGridViewSuggestedDisheIngredients = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.dataGridViewSuggestedDishes = new System.Windows.Forms.DataGridView();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxCategory = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dataGridViewSuggestedDisheIngredients = new System.Windows.Forms.DataGridView();
-            this.buttonAdviceExit = new System.Windows.Forms.Button();
-            this.buttonReportSuggestedMeal = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBoxAfter.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -82,8 +82,8 @@
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSuggestedDishes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSuggestedDisheIngredients)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSuggestedDishes)).BeginInit();
             this.SuspendLayout();
             // 
             // checkedListBoxMealTime
@@ -495,7 +495,7 @@
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.dataGridViewSuggestedDishes);
-            this.groupBox2.Controls.Add(this.comboBox2);
+            this.groupBox2.Controls.Add(this.comboBoxCategory);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.label5);
@@ -507,6 +507,53 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Advice Meal";
+            // 
+            // buttonReportSuggestedMeal
+            // 
+            this.buttonReportSuggestedMeal.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonReportSuggestedMeal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.buttonReportSuggestedMeal.Location = new System.Drawing.Point(345, 521);
+            this.buttonReportSuggestedMeal.Margin = new System.Windows.Forms.Padding(1);
+            this.buttonReportSuggestedMeal.Name = "buttonReportSuggestedMeal";
+            this.buttonReportSuggestedMeal.Size = new System.Drawing.Size(136, 34);
+            this.buttonReportSuggestedMeal.TabIndex = 45;
+            this.buttonReportSuggestedMeal.Text = "Report This Meal";
+            this.buttonReportSuggestedMeal.UseVisualStyleBackColor = false;
+            this.buttonReportSuggestedMeal.Click += new System.EventHandler(this.buttonReportSuggestedMeal_Click);
+            // 
+            // buttonAdviceExit
+            // 
+            this.buttonAdviceExit.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonAdviceExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.buttonAdviceExit.Location = new System.Drawing.Point(497, 521);
+            this.buttonAdviceExit.Margin = new System.Windows.Forms.Padding(1);
+            this.buttonAdviceExit.Name = "buttonAdviceExit";
+            this.buttonAdviceExit.Size = new System.Drawing.Size(136, 34);
+            this.buttonAdviceExit.TabIndex = 44;
+            this.buttonAdviceExit.Text = "Exit";
+            this.buttonAdviceExit.UseVisualStyleBackColor = false;
+            this.buttonAdviceExit.Click += new System.EventHandler(this.buttonAdviceExit_Click);
+            // 
+            // dataGridViewSuggestedDisheIngredients
+            // 
+            this.dataGridViewSuggestedDisheIngredients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSuggestedDisheIngredients.Location = new System.Drawing.Point(32, 334);
+            this.dataGridViewSuggestedDisheIngredients.Margin = new System.Windows.Forms.Padding(1);
+            this.dataGridViewSuggestedDisheIngredients.Name = "dataGridViewSuggestedDisheIngredients";
+            this.dataGridViewSuggestedDisheIngredients.RowHeadersWidth = 123;
+            this.dataGridViewSuggestedDisheIngredients.RowTemplate.Height = 46;
+            this.dataGridViewSuggestedDisheIngredients.Size = new System.Drawing.Size(601, 142);
+            this.dataGridViewSuggestedDisheIngredients.TabIndex = 43;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(29, 300);
+            this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(286, 17);
+            this.label6.TabIndex = 42;
+            this.label6.Text = "The selected dish contais these ingredients:";
             // 
             // label17
             // 
@@ -530,19 +577,20 @@
             this.dataGridViewSuggestedDishes.TabIndex = 40;
             this.dataGridViewSuggestedDishes.Click += new System.EventHandler(this.UpdateIngredients);
             // 
-            // comboBox2
+            // comboBoxCategory
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comboBoxCategory.FormattingEnabled = true;
+            this.comboBoxCategory.Items.AddRange(new object[] {
             "Breakfast",
             "Snack",
             "Lunch",
             "Dinner"});
-            this.comboBox2.Location = new System.Drawing.Point(119, 31);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(1);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(163, 24);
-            this.comboBox2.TabIndex = 39;
+            this.comboBoxCategory.Location = new System.Drawing.Point(119, 31);
+            this.comboBoxCategory.Margin = new System.Windows.Forms.Padding(1);
+            this.comboBoxCategory.Name = "comboBoxCategory";
+            this.comboBoxCategory.Size = new System.Drawing.Size(163, 24);
+            this.comboBoxCategory.TabIndex = 39;
+            this.comboBoxCategory.SelectedIndexChanged += new System.EventHandler(this.LoadSuggestedDishes);
             // 
             // label16
             // 
@@ -579,53 +627,6 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "How do you feel?";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(29, 300);
-            this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(286, 17);
-            this.label6.TabIndex = 42;
-            this.label6.Text = "The selected dish contais these ingredients:";
-            // 
-            // dataGridViewSuggestedDisheIngredients
-            // 
-            this.dataGridViewSuggestedDisheIngredients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewSuggestedDisheIngredients.Location = new System.Drawing.Point(32, 334);
-            this.dataGridViewSuggestedDisheIngredients.Margin = new System.Windows.Forms.Padding(1);
-            this.dataGridViewSuggestedDisheIngredients.Name = "dataGridViewSuggestedDisheIngredients";
-            this.dataGridViewSuggestedDisheIngredients.RowHeadersWidth = 123;
-            this.dataGridViewSuggestedDisheIngredients.RowTemplate.Height = 46;
-            this.dataGridViewSuggestedDisheIngredients.Size = new System.Drawing.Size(601, 142);
-            this.dataGridViewSuggestedDisheIngredients.TabIndex = 43;
-            // 
-            // buttonAdviceExit
-            // 
-            this.buttonAdviceExit.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonAdviceExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.buttonAdviceExit.Location = new System.Drawing.Point(497, 521);
-            this.buttonAdviceExit.Margin = new System.Windows.Forms.Padding(1);
-            this.buttonAdviceExit.Name = "buttonAdviceExit";
-            this.buttonAdviceExit.Size = new System.Drawing.Size(136, 34);
-            this.buttonAdviceExit.TabIndex = 44;
-            this.buttonAdviceExit.Text = "Exit";
-            this.buttonAdviceExit.UseVisualStyleBackColor = false;
-            this.buttonAdviceExit.Click += new System.EventHandler(this.buttonAdviceExit_Click);
-            // 
-            // buttonReportSuggestedMeal
-            // 
-            this.buttonReportSuggestedMeal.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonReportSuggestedMeal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.buttonReportSuggestedMeal.Location = new System.Drawing.Point(345, 521);
-            this.buttonReportSuggestedMeal.Margin = new System.Windows.Forms.Padding(1);
-            this.buttonReportSuggestedMeal.Name = "buttonReportSuggestedMeal";
-            this.buttonReportSuggestedMeal.Size = new System.Drawing.Size(136, 34);
-            this.buttonReportSuggestedMeal.TabIndex = 45;
-            this.buttonReportSuggestedMeal.Text = "Report This Meal";
-            this.buttonReportSuggestedMeal.UseVisualStyleBackColor = false;
-            this.buttonReportSuggestedMeal.Click += new System.EventHandler(this.buttonReportSuggestedMeal_Click);
-            // 
             // Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -648,8 +649,8 @@
             this.tabPage2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSuggestedDishes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSuggestedDisheIngredients)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSuggestedDishes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -669,7 +670,7 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxCategory;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label5;

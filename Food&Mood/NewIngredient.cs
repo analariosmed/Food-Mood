@@ -31,7 +31,7 @@ namespace Food_Mood
         {
             //check if the user neither select a category from the list or informed a custon category
             // AND check if the user just select a category or informed a custon category
-            if((checkedListBoxExistingCategories.CheckedItems.Count > 0 && textBoxNewCategory != null) ||
+            if ((checkedListBoxExistingCategories.CheckedItems.Count > 0 && textBoxNewCategory != null) ||
                     (checkedListBoxExistingCategories.CheckedItems.Count == 0 && textBoxNewCategory == null))
             {
                 MessageBox.Show("Please, select a category from the list OR inform a new category");
@@ -42,7 +42,7 @@ namespace Food_Mood
                 var category = textBoxNewCategory.Text;
                 var ingredient = textBoxNewIngredientName.Text;
                 //validate if the user informed the ingredient name
-                if(ingredient == null)
+                if (ingredient == null)
                 {
                     MessageBox.Show("Please, inform the name of the ingredient!");
                 }

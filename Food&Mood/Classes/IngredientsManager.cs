@@ -49,7 +49,7 @@ namespace Food_Mood.Classes
         {
             HashSet<string> categories = new HashSet<string>();
 
-            foreach(var ing in Ingredients)
+            foreach (var ing in Ingredients)
             {
                 categories.Add(ing.Category);
             }
@@ -62,7 +62,7 @@ namespace Food_Mood.Classes
 
             foreach (var ing in Ingredients)
             {
-                if(ing.Category == category) ingredientsName.Add(ing.Name);
+                if (ing.Category == category) ingredientsName.Add(ing.Name);
             }
             IngredientsName = ingredientsName.ToList();
         }
@@ -78,7 +78,7 @@ namespace Food_Mood.Classes
             {
                 streamWriter.WriteLine($"{ingredient.Category},{ingredient.Name}");
             }
- 
+
         }
     }
 }

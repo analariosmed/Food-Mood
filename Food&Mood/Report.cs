@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 using Application = System.Windows.Forms.Application;
 
@@ -11,10 +12,6 @@ namespace Food_Mood
     {
         //Meal and trifosfato level dictionary
         Dictionary<Meal, string> mealDictionary = new Dictionary<Meal, string>();
-
-        int firstEmotion;
-
-        int finalEmotion;
 
         int indice;
 
@@ -26,7 +23,6 @@ namespace Food_Mood
         {
             InitializeComponent();
             loadDishes();
-            LoadSuggestedDishes();
         }
 
         private void loadDishes()
@@ -87,7 +83,8 @@ namespace Food_Mood
             var intEmot = GetFirstEmotion();
             var finEmot = GetFinalEmotion();
             var emotionResult = 0;
-            if ((intEmot == 0) || (finEmot == 0)){
+            if ((intEmot == 0) || (finEmot == 0))
+            {
                 MessageBox.Show("Please, informe how you fell before and after eating");
             }
             else
@@ -138,7 +135,7 @@ namespace Food_Mood
 
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
         {
-           reportDate = monthCalendar1.SelectionStart;
+            reportDate = monthCalendar1.SelectionStart;
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
@@ -157,60 +154,86 @@ namespace Food_Mood
             //get the selected dishname, mode and the category
             //change the tab
             //use the captured values to fill the gaps.
+            var selectedDish = dataGridViewSuggestedDishes.SelectedCells[0].Value.ToString().Trim();
+            if(selectedDish != null)
+            {
+                DialogResult result = MessageBox.Show($"Do you want to report {selectedDish}?", "Report suggested meal.", MessageBoxButtons.YesNo);
+                if( result.ToString() == "Yes")
+                {
+                    comboBoxDishes.SelectedItem = selectedDish;
+                    checkedListBoxMealTime.SelectedItem = comboBoxCategory.Text;
+                    tabControl1.SelectedIndex = 0;
+                }
+            }
+            
 
         }
-        private void LoadSuggestedDishes()
+        private void LoadSuggestedDishes(object sender, EventArgs e)
         {
-            //TODO:
-            //Filter by best increment into the mood
-            //Filter by category (breakfest, lunch, snack or dinner)
 
+            //take the kind of meal to filter
+            var category = comboBoxCategory.Text;
+
+            //load from the reports files just the meals reported by the current user
             ReportManager.LoadReports();
+
+            //create and format a table to store the values
             var dt = new System.Data.DataTable();
             dt.Columns.Clear();
             dt.Rows.Clear();
             dt.Columns.Add("Dish Name");
 
+            //take the information from the report, filter by the kind of meal and assure that the dishes just appears one time
             HashSet<string> uniqueValues = new HashSet<string>();
-
-            foreach (var dish in ReportManager.ReportList)
+            foreach (var dish in ReportManager.ReportList.Where(x => x.Category == category))
             {
                 uniqueValues.Add(dish.DishName);
             }
-            
-            foreach(var uniqueDish in uniqueValues)
+            //Do another filter to just display dishes that increase the user's humor
+            if (uniqueValues.Count > 0)
             {
-                dt.Rows.Add(uniqueDish);
+                foreach (var uniqueDish in uniqueValues)
+                {
+                    dt.Rows.Add(uniqueDish);
+                }
+
+                dataGridViewSuggestedDishes.DataSource = dt;
+                dataGridViewSuggestedDishes.AutoResizeColumns();
+            }
+            else
+            {
+                MessageBox.Show("Food & Mood uses your historic to suggest you a meal.", "No Meals found!", MessageBoxButtons.OK);
             }
 
-            dataGridViewSuggestedDishes.DataSource = dt;
-            dataGridViewSuggestedDishes.AutoResizeColumns();
         }
 
         private void UpdateIngredients(object sender, EventArgs e)
         {
+            //everytime the user select a dish name, update the field with the ingredients of the dish
+            //create and format a table
             var dt = new System.Data.DataTable();
             dt.Columns.Clear();
             dt.Rows.Clear();
             dt.Columns.Add("Category");
             dt.Columns.Add("Name");
 
+            //find the dish in the dishes list to take the ingredients
             var selectedDish = dataGridViewSuggestedDishes.SelectedCells[0].Value.ToString().Trim();
-            //MessageBox.Show(selectedDish);
             DishesManager.loadDishes();
             var myDish = DishesManager.GetDish(selectedDish);
 
-
+            //if the dish is found, display the ingredients
             if (myDish != null)
             {
                 foreach (var ing in myDish.Ingredients)
                 {
-                    dt.Rows.Add(ing.Category, ing.Name );
+                    dt.Rows.Add(ing.Category, ing.Name);
                 }
             }
             dataGridViewSuggestedDisheIngredients.DataSource = dt;
             dataGridViewSuggestedDisheIngredients.AutoResizeColumns();
         }
+
     }
 }
 

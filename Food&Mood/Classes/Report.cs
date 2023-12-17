@@ -4,7 +4,7 @@ namespace Food_Mood.Classes
 {
     public class Report
     {
-        public string User {  get; set; }
+        public string User { get; set; }
         public DateTime Date { get; set; }
         public string DishName { get; set; }
         public string Category { get; set; }
@@ -12,10 +12,10 @@ namespace Food_Mood.Classes
 
         public Report(string user, DateTime date, string dishName, string category, int value)
         {
-            User = user;
+            User = user.Trim();
             Date = date;
-            DishName = dishName;
-            Category = category;
+            DishName = dishName.Trim();
+            Category = category.Trim();
             Value = value;
         }
     }

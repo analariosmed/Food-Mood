@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Food_Mood
+﻿namespace Food_Mood
 {
     public class User
     {
@@ -14,7 +8,7 @@ namespace Food_Mood
 
         public User() { }
 
-        public User (string user, string password)
+        public User(string user, string password)
         {
             this.name = user;
             this.password = password;

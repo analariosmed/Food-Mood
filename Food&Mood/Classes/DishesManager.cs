@@ -7,7 +7,7 @@ namespace Food_Mood.Classes
     public static class DishesManager
     {
         public static Dictionary<string, Dish> Dishes { get; set; }
-        
+
         public static Dish GetDish(string key)
         {
             return Dishes[key];
@@ -37,11 +37,11 @@ namespace Food_Mood.Classes
                         var category = values[1];
                         var name = values[2];
                         var portionSize = values[3];
-                        
+
                         if (dishName != oldDish) Dishes.Add(dishName, new Dish(dishName));
-                
+
                         Dishes[dishName].Ingredients.Add(new Ingredient(category, name, portionSize));
-                        
+
                         oldDish = dishName;
 
                     }

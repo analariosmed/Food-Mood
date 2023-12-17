@@ -43,7 +43,7 @@ namespace Food_Mood
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            NewAccount  formAccount = new NewAccount();
+            NewAccount formAccount = new NewAccount();
             formAccount.Show();
             this.Hide();
         }

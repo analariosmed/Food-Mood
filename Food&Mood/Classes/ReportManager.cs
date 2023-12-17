@@ -8,9 +8,9 @@ namespace Food_Mood.Classes
     {
         public static List<Report> ReportList { get; set; } = new List<Report>();
 
-        public static void AddReport(Report report) {  ReportList.Add(report); }
+        public static void AddReport(Report report) { ReportList.Add(report); }
 
-        public static void LoadReports() 
+        public static void LoadReports()
         {
             string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
 
@@ -28,8 +28,14 @@ namespace Food_Mood.Classes
                     {
                         string line = reader.ReadLine();
                         string[] values = line.Split(',');
-                        var report = new Report(values[0], DateTime.Parse(values[1]), values[3], values[2], Convert.ToInt32(values[4]));
-                        AddReport(report);
+                        //read only the reports for the current User
+                        //MessageBox.Show(UserManager.CurrentUser.Email);
+                        //MessageBox.Show(values[0].Trim());
+                        if (UserManager.CurrentUser.Email == values[0].Trim())
+                        {
+                            var report = new Report(values[0], DateTime.Parse(values[1]), values[3], values[2], Convert.ToInt32(values[4]));
+                            AddReport(report);
+                        }
                     }
                 }
             }
